@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Home page visual directions · Genesis Hacks</title>
+  </head>
+  <body>
+    <header class="top wrap">
+      <p class="mono dim">Genesis Hacks · home page · proposal for review</p>
+      <h1 class="display">Four ways to tell it <em class="serif">without a cartoon.</em></h1>
+      <p class="lead">Each direction below is a working prototype, not a mock-up. They use only what is real: the Pune photographs, the 45-line run of show, and the 105 events in your database. Pick one, or combine.</p>
+      <nav class="top__nav mono">
+        <a href="#c1">01 Contact sheet</a>
+        <a href="#c2">02 Through the clock</a>
+        <a href="#c3">03 Run-of-show board</a>
+        <a href="#c4">04 Field recording</a>
+      </nav>
+    </header>
+
+    <!-- 01 -->
+    <section class="c" id="c1">
+      <div class="c__head wrap">
+        <span class="mono amber">Direction 01 · photography</span>
+        <h2 class="display">Contact sheet</h2>
+        <p class="lead">The weekend as a photographer's roll of film. Frames slide past with edge print and timestamps, the picked shots get a grease-pencil ring, and the caption track is the real caption of whichever frame is under the loupe.</p>
+        <p class="mono dim">Scroll through it ↓ · hover a frame for colour</p>
+      </div>
+      <div class="sheet">
+        <div class="sheet__stage">
+          <div class="sheet__loupe" aria-hidden="true"></div>
+          <div class="sheet__track"></div>
+          <div class="sheet__cap wrap">
+            <span class="mono amber sheet__no">Frame 01 / 09</span>
+            <p class="serif sheet__line">Energy check</p>
+            <span class="mono dim sheet__meta">Pune · 22 Aug 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="c" id="c2">
+      <div class="c__head wrap">
+        <span class="mono amber">Direction 02 · type as a window</span>
+        <h2 class="display">Through the clock</h2>
+        <p class="lead">Each chapter opens on a time. The photograph from that hour lives inside the numerals, and scrolling pushes you through the clock face until the picture is the whole screen. The clock is the door into every scene.</p>
+        <p class="mono dim">Pick an hour, move the pointer, then scroll ↓</p>
+        <div class="chips" id="hours"></div>
+      </div>
+      <div class="win">
+        <div class="win__stage">
+          <div class="win__photo win__photo--back"></div>
+          <div class="win__mask"><span class="win__time display"><span>0</span><span>3</span><span class="win__colon">:</span><span>0</span><span>0</span></span></div>
+          <div class="win__photo win__photo--front"></div>
+          <div class="win__cap wrap">
+            <span class="mono amber win__when">Sun 03:00</span>
+            <p class="serif win__line">Overnight build</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="c" id="c3">
+      <div class="c__head wrap">
+        <span class="mono amber">Direction 03 · the real schedule</span>
+        <h2 class="display">Run-of-show board</h2>
+        <p class="lead">A split-flap departures board that reads out the actual Hackers Occupied Pune schedule, line by line, the way it ran. Nothing invented: 45 rows from your own run of show. Milestones flip in amber.</p>
+        <p class="mono dim">It plays on its own · on the site, scroll would advance it</p>
+      </div>
+      <div class="wrap">
+        <div class="board" aria-hidden="true">
+          <div class="board__head mono"><span>Hackers Occupied Pune</span><span>Run of show</span><span class="board__day">22 Aug 2026</span></div>
+          <div class="board__cols mono dim"><span>Time</span><span>Activity</span><span>Type</span></div>
+          <div class="board__rows"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="c" id="c4">
+      <div class="c__head wrap">
+        <span class="mono amber">Direction 04 · your event database</span>
+        <h2 class="display">Field recording</h2>
+        <p class="lead">Two years of Genesis played back as a time-lapse. Every one of the 105 events fires a pulse at its city in date order, cities swell as they collect events, and a line traces where the community went next.</p>
+        <p class="mono dim">Plays on its own · drag the bar to scrub</p>
+      </div>
+      <div class="wrap">
+        <div class="atlas">
+          <canvas class="atlas__canvas"></canvas>
+          <div class="atlas__side">
+            <span class="mono amber atlas__date">Sep 2024</span>
+            <span class="display atlas__count">000</span>
+            <span class="mono dim">of 105 events</span>
+            <p class="atlas__now"></p>
+            <ol class="atlas__log mono dim"></ol>
+            <div class="atlas__legend mono dim">
+              <span><i class="k k--own"></i>Organised by Genesis</span>
+              <span><i class="k k--part"></i>Partnered, sponsored, chapter</span>
+            </div>
+          </div>
+          <input class="atlas__scrub" type="range" min="0" max="1000" value="0" aria-label="Scrub through the events" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="end wrap">
+      <h2 class="display">How they could <em class="serif">fit together</em></h2>
+      <div class="end__grid">
+        <div><span class="mono amber">01 Contact sheet</span><p>Replaces the cartoon film as the main "weekend" chapter. Most human, uses every photo you have.</p></div>
+        <div><span class="mono amber">02 Through the clock</span><p>Becomes the transition between chapters, so the clock idea carries the whole page.</p></div>
+        <div><span class="mono amber">03 Run-of-show board</span><p>Replaces the sponsor call-sheet ruler, or opens the Pune recap page.</p></div>
+        <div><span class="mono amber">04 Field recording</span><p>Replaces the headcount squares and city marquee with the real two-year history.</p></div>
+      </div>
+      <p class="mono dim">Nothing on the live home page has been changed yet.</p>
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
